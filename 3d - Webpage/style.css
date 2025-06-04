@@ -1,0 +1,168 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f0f0f;
+  overflow-x: hidden;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Headline Animation */
+.headline {
+  text-align: center;
+  padding: 2rem;
+  font-size: 3rem;
+  background: linear-gradient(45deg, #da0c9c, #ab0c0c);
+  
+  /* Text Gradient (safe cross-browser) */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  
+  animation: pulse 3s infinite ease-in-out;
+}
+
+/* Products */
+.product-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  background: #1c1c1c;
+  padding: 1rem;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+  box-shadow: 0 0 20px rgba(223, 29, 117, 0.2);
+  transform-style: preserve-3d;
+}
+
+.card:hover {
+  transform: rotateY(10deg) rotateX(10deg);
+  box-shadow: 0 0 40px rgba(230, 22, 119, 0.4);
+}
+
+/* Image style with glow and blur edges */
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  filter: drop-shadow(0 0 10px rgba(171, 8, 41, 0.3));
+  transition: filter 0.3s ease-in-out;
+  display: block;
+  margin: auto;
+}
+
+.card img:hover {
+  filter: blur(1px) brightness(1.1) drop-shadow(0 0 15px rgba(245, 40, 102, 0.5));
+}
+
+.buy-btn {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background: rgba(0, 255, 255, 0.2);
+  border: 1px solid rgb(240, 10, 10);
+  color: rgb(236, 239, 242);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  background: rgb(235, 33, 141);
+  color: #000;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  background-color: #111;
+}
+
+/* Headline Pulse Animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s ease;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  animation: popIn 0.4s ease;
+  box-shadow: 0 0 30px rgba(255, 0, 191, 0.6);
+}
+
+.modal-content button {
+  margin: 1rem;
+  padding: 10px 20px;
+  font-weight: bold;
+  background: #ff1493;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-content button:hover {
+  background: #ff0066;
+  transform: scale(1.05);
+}
+
+.qr-box img {
+  width: 250px;
+  border-radius: 15px;
+  animation: zoomIn 0.4s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes zoomIn {
+  0% { transform: scale(0.3); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+

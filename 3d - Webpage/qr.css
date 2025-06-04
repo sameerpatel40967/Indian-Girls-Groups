@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle, #ff00cc, #333);
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  text-align: center;
+}
+
+.popup {
+  background: #111;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 30px hotpink;
+  animation: fadeIn 1s ease-in;
+}
+
+button {
+  margin: 1rem;
+  padding: 10px 20px;
+  background-color: hotpink;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.qr-section {
+  display: none;
+  animation: fadeIn 1s ease-in;
+}
+
+.qr-section img {
+  margin-top: 20px;
+  width: 200px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px white;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
